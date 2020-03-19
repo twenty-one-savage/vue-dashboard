@@ -16,8 +16,10 @@ import "material-icons/iconfont/material-icons.css" //Material Icons
 import "vuesax/dist/vuesax.css" // Vuesax
 Vue.use(Vuesax)
 
+import axios from 'axios'
+
 // axios
-// import axios from "./axios.js"
+// import axios from "~~/axios.js"
 // Vue.prototype.$http = axios
 
 // Theme Configurations
@@ -65,5 +67,6 @@ require("@/assets/css/iconfont.css")
 Vue.config.productionTip = false
 
 new Vue({
+  axios,
   render: h => h(App)
 })

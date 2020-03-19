@@ -11,6 +11,9 @@
 // import tailwindConfig from "../../tailwind.config.js"
 
 const getters = {
+  COMPANIES (state) {
+    return state.companies
+  },
   // COMPONENT
   // vx-autosuggest
   starredPages: state =>

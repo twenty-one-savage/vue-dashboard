@@ -1,0 +1,74 @@
+{
+  "companies": [
+    {
+      "id": 1,
+      "name": "Velvette",
+      "logo": "Velvette.png",
+      "slug": "velvette",
+      "props": [{
+          "id": 1,
+          "name": "Выполнение годового плана по производству",
+          "value": 33,
+          "units": "%"
+        },
+        {
+          "id": 2,
+          "name": "Сумма на р/с",
+          "value": "11 541 012",
+          "units": "₽"
+        },
+        {
+          "id": 3,
+          "name": "В производстве",
+          "value": 73
+        }
+      ]
+    }, {
+      "id": 2,
+      "name": "Multideck",
+      "logo": "Multideck.png",
+      "slug": "multideck",
+      "props": [{
+          "id": 1,
+          "name": "Выполнение годового плана по производству",
+          "value": 41,
+          "units": "%"
+        },
+        {
+          "id": 2,
+          "name": "Сумма на р/с",
+          "value": "9 455 233",
+          "units": "₽"
+        },
+        {
+          "id": 3,
+          "name": "В производстве",
+          "value": 133
+        }
+      ]
+    }, {
+      "id": 3,
+      "name": "Voldone",
+      "logo": "Voldone.png",
+      "slug": "voldone",
+      "props": [{
+          "id": 1,
+          "name": "Выполнение годового плана по производству",
+          "value": 83,
+          "units": "%"
+        },
+        {
+          "id": 2,
+          "name": "Сумма на р/с",
+          "value": "8 323 456",
+          "units": "₽"
+        },
+        {
+          "id": 3,
+          "name": "В производстве",
+          "value": 91
+        }
+      ]
+    }
+  ]
+}

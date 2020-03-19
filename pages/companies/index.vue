@@ -14,8 +14,8 @@
 -->
 <template>
   <section>
-    <h2 class="mb-4" @click="changeLocalStore">Список компаний</h2>
-
+    <h2 class="mb-4">Список компаний</h2>
+    <!-- <pre>{{ companies }}</pre> -->
     <vx-card class="mb-5" v-for="item in companies" :key="item.id">
       <img class="company__img mb-5 mx-auto" :src="item.logo" alt="Логотип Компании">
       <nuxt-link class="company__title text-center block" :to="`companies/${item.slug}`">{{ item.name }}</nuxt-link>
@@ -32,37 +32,23 @@
 </template>
 
 <script>
-  import {mapState} from 'vuex'
+  import {mapGetters, mapActions} from 'vuex'
   export default {
-    async asyncData({
-      app,
-      route,
-      params,
-      error,
-      store
-    }) {
-      try {
-        await store.dispatch('getCompaniesList')
-
-      } catch (err) {
-        console.log(err)
-        return error({
-          statusCode: 404,
-          message: 'Категории не найдены или сервер не доступен'
-        })
-      }
-    },
     computed: {
-      ...mapState({
-        companies: 'companiesList'
+      ...mapGetters({
+        companies: 'COMPANIES'
       })
     },
     methods: {
-      changeLocalStore: function () {
-        this.companies = 'ggj';
-        console.log(this.companies);
-
-      }
+      ...mapActions([
+        'GET_COMPANIES'
+      ])
+    },
+    created() {
+      this.GET_COMPANIES()
+      .then(response => {
+        console.log('Data Arrived')
+      })
     }
   }
 

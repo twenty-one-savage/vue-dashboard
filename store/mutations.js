@@ -9,10 +9,10 @@
 
 const mutations = {
   // Для изменения состояния списка с компаниями, изначально он у нас - пустой
-  SET_COMPANIES_LIST(state, company) {
-    state.companiesList = company
+  SET_COMPANIES: (state, companies) => {
+    state.companies = companies
   },
-  SET_CURRENT_COMPANY(state, company) {
+  SET_CURRENT_COMPANY: (state, company) => {
     state.currentCompany = company
   },
   // /////////////////////////////////////////////

@@ -31,7 +31,7 @@ module.exports = {
     //       exclude: /(node_modules)/
     //     })
     //   }
-    vendor: ["./state"]
+    vendor: ["./state", "axios"]
     /*postcss: [
       require('tailwindcss')(),
       require('autoprefixer')(),
